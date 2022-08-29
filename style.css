@@ -1,0 +1,160 @@
+/* google font poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Silkscreen&display=swap');
+
+:root {
+    --bg-primary: #ddd;
+    --bg-nav: skyblue;
+    --bg-item: #333;
+    --bg-icon-primary: #707070;
+    --txt: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100%;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-nav);
+}
+
+nav .brand {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.brand .menu_icon {
+    color: #333;
+    margin-left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.brand .logo_name {
+    color: #333;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.icon_nav{
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: -20px;
+    list-style: none;
+}
+
+.icon_nav li{
+    font-size: 22px;
+}
+
+.icon_nav li .keranjang{
+    margin-left: 50px;
+    color: #333;
+}
+
+.icon_nav li .log_out{
+    height: 30px;
+    width: 30px;
+    color:#333;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.icon_nav li .log_out:hover{
+    background-color: #707070;
+}
+
+.tooltip:hover {
+    color: #fff;
+}
+
+nav .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 210px;
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    transition: all .4s ease;
+}
+
+nav.open .sidebar {
+    left: 0;
+}
+
+nav .sidebar .brand i {
+    margin-right: 200px;
+}
+
+.sidebar .sidebar_content {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 35px 16px;
+}
+
+.sidebar_content .list {
+    list-style: none;
+}
+
+.list .nav_link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 9px 12px;
+    border-radius: 8px;
+}
+
+.nav_link .icon {
+    margin-right: 10px;
+    font-size: 20px;
+    color: var(--bg-icon-primary);
+}
+
+.lists .nav_link:hover {
+    background-color: rgb(39, 205, 205);
+}
+
+.nav_link .link {
+    font-size: 16px;
+    color: var(--bg-icon-primary);
+    font-weight: 400;
+}
+
+.lists .nav_link:hover .icon,
+.lists .nav_link:hover .link{
+    color: var(--txt);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-primary);
+    transition: all .5s ease;
+}
+
+nav.open .overlay {
+    left: 210;
+}
